@@ -12,6 +12,9 @@
  -Create a login page 
 
 
+-Install axio
+-Isntall Cors in the backedn -> add middleware to with configuration :origin,credentail:true
+-whenever we are calling the api ,pass axios  withCredentail:true
 
 
 
