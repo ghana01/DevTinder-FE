@@ -16,6 +16,16 @@
 -Isntall Cors in the backedn -> add middleware to with configuration :origin,credentail:true
 -whenever we are calling the api ,pass axios  withCredentail:true
 
+=Install reduc toolkit +react-redux
+
+-create a configStore  => Provider =>createSlice  => add reducer  to store  
+
+-Add redux  devtool in chroe 
+-ADD redux devtools in chrome
+
+-Login and see if your data is coming properly in yout store 
+-Navbar should update as sonn as user log in
+-Refracter our code to  add constant file +create a component folder and put all the component there
 
 
 

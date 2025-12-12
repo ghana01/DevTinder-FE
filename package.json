@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.1",
     "@tailwindcss/vite": "^4.1.18",
     "axios": "^1.13.2",
     "create-react-router": "^7.10.1",
     "react": "^19.2.0",
+    "react-redux": "^9.2.0",
     "react-router": "^7.10.1",
+    "redux": "^5.0.1",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
