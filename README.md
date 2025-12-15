@@ -27,6 +27,12 @@
 -Navbar should update as sonn as user log in
 -Refracter our code to  add constant file +create a component folder and put all the component there
 
+-
+you should not able to access the other route  without login 
+if token is not present redirect to login page 
+-log out 
+-profile page 
+
 
 
 

@@ -8,6 +8,7 @@ const Login = () => {
 
     const [emailId,setEmailId]=useState("ghandahsy23@gmail.com");
     const [password,setPassword]=useState("Password@123#");
+    const[error,setError]=useState("");
     const dispatch = useDispatch();
     const navigate =useNavigate();
     const handelLogin  =async()=>{
@@ -24,6 +25,7 @@ const Login = () => {
         dispatch(addUser(res.data));
          return navigate('/feed')
         }catch(err){
+            setError(err?.response?.data ||"error in logging in the user");
             console.log("error in logging in the user: " + err.message);
         }
       
@@ -52,7 +54,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             />
 
-
+            <p className="text-red-500">{error}</p>
             <button className="btn btn-neutral mt-4"
             onClick={handelLogin}
             >Login</button>
