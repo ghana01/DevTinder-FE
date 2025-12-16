@@ -8,7 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import { Provider } from 'react-redux'
 import appStore from './utils/appStore.js'
 import Feed from './components/Feed.jsx'
-
+import Connection from './components/Connection.jsx'
+import Request from './components/Request.jsx'
 
 
 function App() {
@@ -20,10 +21,12 @@ function App() {
         <BrowserRouter basename='/'>
           <Routes>
             <Route path='/' element={<Body/>} >
-              <Route path='/feed' element={<Feed/>} />
+              <Route path='/' element={<Feed/>} />
               <Route path='/login' element={<Login/>} />
               <Route path="/footer" element={<Footer/>} />
               <Route path='/profile' element={<Profile/>} />
+              <Route path='connection' element={<Connection/>} />
+              <Route path='/request' element={<Request/>} />
             </Route>
           </Routes>
         </BrowserRouter>

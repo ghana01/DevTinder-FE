@@ -34,6 +34,9 @@ if token is not present redirect to login page
 -profile page 
 get the feed and add to the feed store
 buil the user card and feed
+-edit profile feature
+-show toast message on save
+-see all the connection -> who are already connected to me
 
 
 
