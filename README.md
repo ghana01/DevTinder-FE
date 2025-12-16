@@ -38,6 +38,8 @@ buil the user card and feed
 -show toast message on save
 -see all the connection -> who are already connected to me
 
+-see the request user get 
+
 
 
 
