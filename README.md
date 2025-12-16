@@ -32,6 +32,8 @@ you should not able to access the other route  without login
 if token is not present redirect to login page 
 -log out 
 -profile page 
+get the feed and add to the feed store
+buil the user card and feed
 
 
 
