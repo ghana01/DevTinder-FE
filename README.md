@@ -37,6 +37,8 @@ buil the user card and feed
 -edit profile feature
 -show toast message on save
 -see all the connection -> who are already connected to me
+-send/ignore the user card from feed
+-signup the new user
 
 -see the request user get 
 
