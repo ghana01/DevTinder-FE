@@ -10,7 +10,7 @@ import appStore from './utils/appStore.js'
 import Feed from './components/Feed.jsx'
 import Connection from './components/Connection.jsx'
 import Request from './components/Request.jsx'
-
+import ErrorPage from './components/ErrorPage.jsx'
 
 function App() {
   
@@ -27,6 +27,7 @@ function App() {
               <Route path='/profile' element={<Profile/>} />
               <Route path='connection' element={<Connection/>} />
               <Route path='/request' element={<Request/>} />
+              <Route path='/error' element ={<ErrorPage/>} />
             </Route>
           </Routes>
         </BrowserRouter>

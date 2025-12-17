@@ -24,7 +24,14 @@ const Body = () => {
       if(err.status ===401){
            Navigate('/login')
       }
-      console.error(err);
+      else if(err.code ==="ERR_NETWORK"){
+        Navigate('/error')
+      }
+      else {
+        console.log("Some other error occured",err);
+        Navigate('/login');
+      }
+      
     }
 
   }
