@@ -4,7 +4,7 @@ import NavBar from './NavBar.jsx'
 import Footer from './Footer.jsx'
 import {useDispatch,useSelector} from 'react-redux';
 import axios from 'axios';
-import {addUser,removeUser} from '../utils/userSlice.js'
+import {addUser} from '../utils/userSlice.js'
 import { Outlet } from 'react-router'
 import { useNavigate } from 'react-router';
 const Body = () => {
