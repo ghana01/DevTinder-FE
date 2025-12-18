@@ -17,7 +17,7 @@ const EditProfile = ({user}) => {
             // before saving the profile cler the error
             setError("");
             try{
-                const res =await axios.patch("http://localhost:4000/profile/edit",{
+                const res =await axios.patch(`${import.meta.env.VITE_API_URL}/profile/edit`,{
                     firstName,
                     lastName,
                     age,    

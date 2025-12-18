@@ -12,7 +12,7 @@ const Request = () => {
         // 1. Call API: POST /request/review/:status/:requestId
         // 2. Dispatch action to remove this request from Redux store
         try{
-            const res =await axios.post(`http://localhost:4000/request/review/${status}/${_id}`,
+            const res =await axios.post(`${import.meta.env.VITE_API_URL}/request/review/${status}/${_id}`,
                 {},{withCredentials:true});
             console.log("review request response",res.data);
             //Update the redux 
@@ -27,7 +27,7 @@ const Request = () => {
 
     const getRequests = async () => {
         try {
-            const res = await axios.get("http://localhost:4000/user/requests", { withCredentials: true });
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/user/requests`, { withCredentials: true });
             dispatch(addRequest(res.data.data));
         } catch (err) {
             console.log("error in fetching requests", err);

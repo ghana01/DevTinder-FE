@@ -14,7 +14,7 @@ const UserCard = ({ user }) => {
 
   const { _id,firstName, lastName, photoUrl, age, gender, about } = user;
      const handelsendRequest = async (status,_id)=>{
-        await axios.post(`http://localhost:4000/request/send/${status}/${_id}`,
+        await axios.post(`${import.meta.env.VITE_API_URL}/request/send/${status}/${_id}`,
             {},{withCredentials:true});
 
         alert(`Request ${status} successfully`);

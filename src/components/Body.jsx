@@ -15,7 +15,7 @@ const Body = () => {
   const fetchUser = async () => {
      if(userData) return; 
     try{
-        const res =await axios.get("http://localhost:4000/profile",{
+        const res =await axios.get(`${import.meta.env.VITE_API_URL}/profile`,{
       withCredentials:true
     });
     dispatch(addUser(res.data));

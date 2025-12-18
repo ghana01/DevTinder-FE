@@ -21,7 +21,7 @@ const Login = () => {
             
             if (isLogin) {
                 // --- LOGIN LOGIC ---
-                const res = await axios.post("http://localhost:4000/auth/login", {
+                const res = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, {
                     emailId,
                     password
                 }, { withCredentials: true });
@@ -30,7 +30,7 @@ const Login = () => {
                 navigate('/');
             } else {
                 // --- SIGNUP LOGIC ---
-                const res = await axios.post("http://localhost:4000/auth/signup", {
+                const res = await axios.post(`${import.meta.env.VITE_API_URL}/auth/signup`, {
                     firstName,
                     lastName,
                     emailId,

@@ -12,7 +12,7 @@ const Connection = () => {
             // FIX: Check if connections exists (is not null)
             if (connections) return;
             
-            const res = await axios.get("http://localhost:4000/user/connection", { withCredentials: true });
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/user/connection`, { withCredentials: true });
             console.log("connections data", res.data);
             dispatch(addConnection(res.data.connectionRequest));
         } catch (err) {

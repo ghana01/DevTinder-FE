@@ -14,7 +14,7 @@ const NavBar = () => {
  const handelLogout =async()=>{
      
   try{
-  await axios.post("http://localhost:4000/auth/logout",{},{withCredentials:true});
+  await axios.post(`${import.meta.env.VITE_API_URL}/auth/logout`,{},{withCredentials:true});
     alert("user logged out successfully");
     dispatch(removeUser());
    
