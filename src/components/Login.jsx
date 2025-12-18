@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice.js'
-import { useNavigate } from 'react-router-dom' // Fixed: use react-router-dom
+import { useNavigate } from 'react-router' // Fixed: use react-router-dom
 import axios from 'axios';
 
 const Login = () => {
