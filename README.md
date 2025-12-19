@@ -44,6 +44,12 @@ buil the user card and feed
 
 
 
+## Real Time Chat using WebSocket(socket.io)
+  -build the ui for chat window on chat/:toUserId-
+  -set up the socket io in the backkend
+  
+
+
 
  Body
      NavBar

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { addConnection } from '../utils/connectionSlice';
-
+import {Link} from 'react-router';
 const Connection = () => {
     const dispatch = useDispatch();
     const connections = useSelector(store => store.connection);
@@ -14,7 +14,7 @@ const Connection = () => {
             
             const res = await axios.get("http://localhost:4000/user/connection", { withCredentials: true });
             console.log("connections data", res.data);
-            dispatch(addConnection(res.data.connectionRequest));
+            dispatch(addConnection(res.data.data));
         } catch (err) {
             console.log("error in fetching connections", err);
         }
@@ -42,23 +42,28 @@ const Connection = () => {
             
             <div className='flex flex-col items-center gap-4'>
                 {connections.map((connection) => {
-                    const data = connection.fromUserId;
+                    
 
                     return (
-                        <div key={connection._id} className="flex items-center bg-base-200 p-4 rounded-lg w-1/2 shadow-md">
+                        <div key={connection._id} className="flex items-center justify-between bg-base-200 p-4 rounded-lg w-1/2 shadow-md">
                             <img 
-                                src={data.photoUrl} 
+                                src={connection.photoUrl} 
                                 alt="profile" 
                                 className="w-16 h-16 rounded-full object-cover mr-4"
                             />
                             <div className="text-left">
-                                <p className="font-bold text-lg">{data.firstName} {data.lastName}</p>
-                                {data.age && data.gender && (
-                                    <p className="text-sm text-gray-500">{data.age} • {data.gender}</p>
+                                <p className="font-bold text-lg">{connection.firstName} {connection.lastName}</p>
+                                {connection.age && connection.gender && (
+                                    <p className="text-sm text-gray-500">{connection.age} • {connection.gender}</p>
                                 )}
-                                <p className="text-sm">{data.about}</p>
-                                <p className='text-sm'>{data.skills}</p>
+                                <p className="text-sm">{connection.about}</p>
+                                <p className='text-sm'>{connection.skills}</p>
+                                <Link to={`/chat/${connection._id}`}>
+                                  <button  className="btn btn-primary">Chat</button>
+                                </Link>
+                                
                             </div>
+                             
                         </div>
                     );
                 })}

@@ -25,7 +25,7 @@ const Feed = () => {
       <div className="flex justify-center items-center my-10">
          <UserCard user={feed[0]}/>
       </div>
-    )
+    ) 
   
   )
 }
