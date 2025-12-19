@@ -44,6 +44,14 @@ buil the user card and feed
 
 
 
+## we are going to buildd the chat system where people real time  chat
+ ##websocket
+  socket.io
+
+
+
+
+
 
  Body
      NavBar
